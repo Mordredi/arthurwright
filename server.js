@@ -10,7 +10,10 @@ var cookieParser = require('cookie-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var flash = require('connect-flash');
+var admin = require('./app/routes/admin')
 var User = require('./app/models/user');
+var Post = require('./app/models/post');
+var Project = require('./app/models/project');
 
 var port = process.env.PORT || 3000;
 
@@ -48,8 +51,8 @@ passport.deserializeUser(function(id, done) {
 
 mongoose.connect(process.env.PROD_MONGODB || 'mongodb://localhost/arthurwright');
 
- app.get('*', function(req, res) {
-  res.sendfile('./public/views/index.html'); // load our public/index.html file
+app.get('*', function(req, res) {
+  res.sendfile('./public/views/index.html');
 });
 
 
