@@ -5,10 +5,8 @@ var Post = require('../models/post');
 var Project = require('../models/project');
 var router = express.Router();
 
-router.post('/admin', passport.authenticate('local', { successRedirect: '/shows',
-                                                         failureRedirect: '/login',
-                                                         failureFlash: true,
-                                                         successFlash: "Welcome to TV Chat!"
+router.post('/admin/login', passport.authenticate('local', { successRedirect: '/admin',
+                                                         failureRedirect: '/admin/login'
                                                     })
 );
 
