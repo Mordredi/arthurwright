@@ -9,6 +9,7 @@ var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var path = require('path');
 var flash = require('connect-flash');
 var admin = require('./app/routes/admin');
 var blog = require('./app/routes/blog');
@@ -55,15 +56,9 @@ passport.deserializeUser(function(id, done) {
 mongoose.connect(process.env.PROD_MONGODB || 'mongodb://localhost/arthurwright');
 
 app.get('*', function(req, res) {
-  res.sendFile('public/views/index.html');
+  res.sendFile(path.join(__dirname, './public', '/index.html'));
 });
-
 
 app.listen(port);
 
 console.log('Magic happens on port ' + port);
-
-exports = module.exports = app;
-
-
-

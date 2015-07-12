@@ -1,3 +1,3 @@
 angular.module('ArthurWright').factory('Blog', function($resource){
-  return $resource('/blog/:id');
+  return $resource('/api/blog/:id');
 });
