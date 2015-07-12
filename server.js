@@ -54,7 +54,7 @@ passport.deserializeUser(function(id, done) {
 
 mongoose.connect(process.env.PROD_MONGODB || 'mongodb://localhost/arthurwright');
 
-app.get('/', function(req, res) {
+app.get('*', function(req, res) {
   res.sendFile('public/views/index.html');
 });
 
