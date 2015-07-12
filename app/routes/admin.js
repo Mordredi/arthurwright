@@ -23,3 +23,5 @@ router.post('admin/project', function(req, res){
     console.log('Saved');
   });
 });
+
+module.exports = router;
