@@ -1,0 +1,1 @@
+angular.module('ArthurWright', ['ngRoute', 'ngResource']);
