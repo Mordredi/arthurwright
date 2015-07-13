@@ -11,7 +11,7 @@ router.get('/api/blog', function(req, res){
 
 router.get('/api/blog/:id', function(req, res){
   var postId = req.params.id;
-  Post.find({_id: postId}, function(err, post){
+  Post.findOne({_id: postId}, function(err, post){
     res.json(post);
   });
 });

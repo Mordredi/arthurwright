@@ -12,6 +12,20 @@ angular.module('ArthurWright').config(function($routeProvider, $locationProvider
     .when('/blog/:id', {
       templateUrl: "../templates/blog/show.html",
       controller: "BlogShowController"
+    })
+
+    .when('/admin', {
+      templateUrl: "../templates/admin/index.html"
+    })
+
+    .when('/admin/blog', {
+      templateUrl: "../templates/admin/blog.html",
+      controller: "AdminBlogController"
+    })
+
+    .when('/admin/login', {
+      templateUrl: "../templates/admin/login.html",
+      controller: "AdminLoginController"
     });
 
     $locationProvider.html5Mode(true);
