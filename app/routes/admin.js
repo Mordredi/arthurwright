@@ -5,16 +5,16 @@ var Post = require('../models/post');
 var Project = require('../models/project');
 var router = express.Router();
 
-router.post('/admin/login', passport.authenticate('local', { successRedirect: '/admin',
-                                                         failureRedirect: '/admin/login'
-                                                    })
-);
-
-router.post('/admin/blog', function(req, res){
-  var post = new Post({title: req.body.title, article: req.body.article});
-  post.save(function(err, post){
-    console.log('Saved');
+router.post('/admin/new', function(req, res){
+  User.register(new User({ username: req.body.username}), req.body.password, function(err, user){
+    passport.authenticate('local')(req, res, function(){
+      res.send(req.user);
+    });
   });
+});
+
+router.post('/admin/login', passport.authenticate('local'), function(req, res){
+  res.send(req.user);
 });
 
 router.post('admin/project', function(req, res){

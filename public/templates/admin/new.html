@@ -1,0 +1,15 @@
+<form>
+  <div class="form-field">
+    <label for="username">Username: </label>
+    <input type="text" id="username" ng-model="admin.username">
+  </div>
+  <div class="form-field">
+    <label for="password">Password: </label>
+    <input type="password" id="password" ng-model="admin.password">
+  </div>
+  <div class="form-field">
+    <label for="password-confirmation">Password Confirmation: </label>
+    <input type="password" id="password-confirmation" ng-model="admin.passwordConfirmation">
+  </div>
+  <button type="submit" ng-click="newAdmin(admin)">Register</button>
+</form>

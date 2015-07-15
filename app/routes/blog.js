@@ -9,6 +9,13 @@ router.get('/api/blog', function(req, res){
   });
 });
 
+router.post('/api/blog', function(req, res){
+  var post = new Post({title: req.body.title, article: req.body.article});
+  post.save(function(err, post){
+    res.send(post);
+  });
+});
+
 router.get('/api/blog/:id', function(req, res){
   var postId = req.params.id;
   Post.findOne({_id: postId}, function(err, post){

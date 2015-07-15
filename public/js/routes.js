@@ -18,6 +18,11 @@ angular.module('ArthurWright').config(function($routeProvider, $locationProvider
       templateUrl: "../templates/admin/index.html"
     })
 
+    .when('/admin/new', {
+      templateUrl: "../templates/admin/new.html",
+      controller: "AdminNewController"
+    })
+
     .when('/admin/blog', {
       templateUrl: "../templates/admin/blog.html",
       controller: "AdminBlogController"
