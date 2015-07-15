@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem; }
+  header .logo {
+    font-size: 1rem; }
+  header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0; }
+  header a {
+    text-decoration: none;
+    padding: 0.5rem 1rem; }
