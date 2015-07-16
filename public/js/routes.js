@@ -14,6 +14,14 @@ angular.module('ArthurWright').config(function($routeProvider, $locationProvider
       controller: "BlogShowController"
     })
 
+    .when('/performer', {
+      templateUrl: "../templates/performer/index.html"
+    })
+
+    .when('/developer', {
+      templateUrl: "../templates/developer/index.html"
+    })
+
     .when('/admin', {
       templateUrl: "../templates/admin/index.html"
     })
