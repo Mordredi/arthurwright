@@ -43,3 +43,21 @@ header {
 
 main {
   margin-top: 2rem; }
+
+body {
+  background: #e9eaed; }
+
+.image {
+  width: 100vw;
+  height: 40rem;
+  background: url("../img/AW_135.jpg") no-repeat;
+  background-size: cover; }
+
+.hero {
+  text-align: center; }
+
+h1 {
+  font-size: 3rem; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }

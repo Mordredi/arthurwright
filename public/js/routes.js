@@ -19,7 +19,8 @@ angular.module('ArthurWright').config(function($routeProvider, $locationProvider
     })
 
     .when('/developer', {
-      templateUrl: "../templates/developer/index.html"
+      templateUrl: "../templates/developer/index.html",
+      controller: "ProjectIndexController"
     })
 
     .when('/admin', {
@@ -34,6 +35,11 @@ angular.module('ArthurWright').config(function($routeProvider, $locationProvider
     .when('/admin/blog', {
       templateUrl: "../templates/admin/blog.html",
       controller: "AdminBlogController"
+    })
+
+    .when('/admin/project', {
+      templateUrl: "../templates/admin/project.html",
+      controller: "AdminProjectController"
     })
 
     .when('/admin/login', {

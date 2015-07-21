@@ -13,6 +13,7 @@ var path = require('path');
 var flash = require('connect-flash');
 var admin = require('./app/routes/admin');
 var blog = require('./app/routes/blog');
+var blog = require('./app/routes/project');
 var User = require('./app/models/user');
 var Post = require('./app/models/post');
 var Project = require('./app/models/project');

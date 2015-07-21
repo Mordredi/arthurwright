@@ -5,7 +5,8 @@ var Project = new Schema({
   name: { type: String },
   description: { type: String },
   url: { type: String },
-  image: { type: String }
+  image: { type: String },
+  git: { type: String }
 });
 
 module.exports = mongoose.model('Project', Project);
