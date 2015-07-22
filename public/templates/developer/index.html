@@ -1,13 +1,23 @@
-<div class="hero">
-  <h1>Developer</h1>
+<div class="page-nav">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#rates">Rates</a></li>
+  </ul>
 </div>
-<div class="section">
+<div id="about" class="hero">
+  <h1>Web Developer</h1>
+</div>
+<div id="projects" class="section">
   <h2>Projects</h2>
   <div ng-repeat="project in projects">
     <h3>{{ project.name }}</h3>
+    <img class="project-image" ng-src="{{ project.image }}" alt="{{project.name}}" />
     <p>{{ project.description }}</p>
     <a ng-href="{{ project.url }}" target="_blank">Website</a>
     <a ng-href="{{ project.git }}" target="_blank">Git Repo</a>
   </div>
 </div>
-<h2>Rates</h2>
+<div class="section" id="rates">
+  <h2>Rates</h2>
+</div>
