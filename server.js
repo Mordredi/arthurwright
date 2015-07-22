@@ -42,6 +42,7 @@ app.use(function(req, res, next) {
 app.use(flash());
 app.use(admin);
 app.use(blog);
+app.use(project);
 
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(function(user, done) {

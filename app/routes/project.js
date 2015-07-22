@@ -5,6 +5,7 @@ var router = express.Router();
 router.get('/api/project', function(req, res){
   Project.find(function(err, projects){
     if (err) { console.log('error')};
+    console.log(projects);
     res.json(projects);
   });
 });
