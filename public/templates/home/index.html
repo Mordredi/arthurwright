@@ -1,20 +1,22 @@
 <div class="page-nav">
   <ul>
-    <li><a href="#about">About</a></li>
-    <li><a href="#performer">Performer</a></li>
-    <li><a href="#web-developer">Web Developer</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a ng-click="gotoAnchor('about')">About</a></li>
+    <li><a ng-click="gotoAnchor('performer')">Performer</a></li>
+    <li><a ng-click="gotoAnchor('web-developer')">Web Developer</a></li>
+    <li><a ng-click="gotoAnchor('blog')">Blog</a></li>
+    <li><a ng-click="gotoAnchor('contact')">Contact</a></li>
   </ul>
 </div>
-<div id="about" class="hero">
+<div class="image">
   <h1>Arthur Wright</h1>
+</div>
+<div id="about" class="section">
   <p>Arthur Wright is an actor, a singer, and a web developer</p>
 </div>
 <div class="image">
-</div>
-<div id="performer">
   <h2>Performer</h2>
+</div>
+<div id="performer" class="section">
   <p>
     Arthur has performed in musicals and operas across the country.
   </p>
@@ -23,8 +25,10 @@
   </p>
   <a ng-href="/performer">Arthur Wright | Performer</a>
 </div>
-<div id="web-developer">
+<div class="image">
   <h2>Web Developer</h2>
+</div>
+<div id="web-developer" class="section">
   <p>
     Arthur is a recent graduate of the Bitmaker Labs full time Web Development bootcamp
   </p>
@@ -33,15 +37,18 @@
   </p>
   <a ng-href="/developer">Arthur Wright | Web Developer</a>
 </div>
-<div id="blog">
+<div class="image">
   <h2>Blog</h2>
+</div>
+<div id="blog" class="section">
   <p>
     A sometimes daily account of his life and thoughts. From performing to programming and everything in between.
   </p>
   <a ng-href="/blog">Blog</a>
 </div>
-<div id="contact">
+<div class="image">
   <h2>Contact</h2>
+</div>
+<div id="contact" class="section">
   <p>Email: arthur@arthurwright.ca</p>
 </div>
-<!-- <img src="../img/AW_135.jpg" alt="Arthur Wright"> -->
