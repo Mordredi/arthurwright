@@ -52,9 +52,23 @@ body {
 .image {
   width: 100vw;
   height: 95vh;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
-  url('../img/AW_135.jpg');
+  padding-top: 40vh;
   background-size: cover;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
+  &.about {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    url('../img/AW_135.jpg') fixed;
+  }
+  &.performer {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    url('../img/AW_44.jpg') top-center no-repeat fixed;
+  }
+  &.developer {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    url('../img/tvchat.png') fixed;
+  }
   h2 {
     margin: 0;
     color: #fff;
@@ -71,6 +85,7 @@ body {
   height: 95vh;
   width: 100vw;
   background-color: #fff;
+  overflow: hidden;
   p {
     margin: 0;
   }
@@ -78,7 +93,7 @@ body {
 
 h1 {
   font-size: 3rem;
-  color: #fff;
+
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
