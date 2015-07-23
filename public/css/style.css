@@ -15,7 +15,8 @@ header {
   left: 0;
   width: 100%;
   height: 2rem;
-  background: #020066; }
+  box-shadow: 0 1px 1px #333;
+  background: #bd72ff; }
   header .logo {
     font-size: 1rem; }
   header ul {
@@ -26,7 +27,8 @@ header {
   header a {
     text-decoration: none;
     padding: 0.5rem 1rem;
-    color: #fff; }
+    color: #fff;
+    text-shadow: 0 1px 1px #333; }
 
 .page-nav {
   position: fixed;
@@ -44,23 +46,28 @@ header {
 main {
   margin-top: 2rem; }
 
-body {
-  background: #e9eaed; }
-
 .image {
   width: 100vw;
   height: 95vh;
   padding-top: 40vh;
-  background-size: cover;
   text-align: center;
   color: #fff;
   text-shadow: 0 1px 1px #333; }
   .image.about {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white), url("../img/AW_135.jpg") fixed; }
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white), url("../img/AW_135.jpg") no-repeat fixed;
+    background-size: cover; }
   .image.performer {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white), url("../img/AW_44.jpg") top-center no-repeat fixed; }
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white), url("../img/widow.jpg") no-repeat fixed, #000;
+    background-size: cover; }
   .image.developer {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white), url("../img/tvchat.png") fixed; }
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white), url("../img/developer.jpeg") no-repeat fixed;
+    background-size: cover; }
+  .image.contact {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white), url("../img/unsplash-bonus.jpg") bottom no-repeat fixed;
+    background-size: cover; }
+  .image.blog {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white), url("../img/blog.jpg") center no-repeat fixed;
+    background-size: cover; }
   .image h2 {
     margin: 0;
     color: #fff; }

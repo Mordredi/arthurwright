@@ -7,7 +7,8 @@ header {
   left: 0;
   width: 100%;
   height: 2rem;
-  background: hsl(241, 100%, 20%);
+  box-shadow: 0 1px 1px #333;
+  background: #bd72ff;
   .logo {
     font-size: 1rem;
   }
@@ -21,6 +22,7 @@ header {
     text-decoration: none;
     padding: .5rem 1rem;
     color: #fff;
+    text-shadow: 0 1px 1px #333;
   }
 }
 
@@ -45,29 +47,37 @@ main {
   margin-top: 2rem;
 }
 
-body {
-  background: hsl(225, 10%, 92%);
-}
-
 .image {
   width: 100vw;
   height: 95vh;
   padding-top: 40vh;
-  background-size: cover;
   text-align: center;
   color: #fff;
   text-shadow: 0 1px 1px #333;
   &.about {
     background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
-    url('../img/AW_135.jpg') fixed;
+    url('../img/AW_135.jpg') no-repeat fixed;
+    background-size: cover;
   }
   &.performer {
     background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
-    url('../img/AW_44.jpg') top-center no-repeat fixed;
+    url('../img/widow.jpg') no-repeat fixed, #000;
+    background-size: cover;
   }
   &.developer {
     background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
-    url('../img/tvchat.png') fixed;
+    url('../img/developer.jpeg') no-repeat fixed; //image by William Ivan
+    background-size: cover;
+  }
+  &.contact {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    url('../img/unsplash-bonus.jpg') bottom no-repeat fixed; //image supplied by Luke Chesser
+    background-size: cover;
+  }
+  &.blog {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    url('../img/blog.jpg') center no-repeat fixed; //image supplied by Luke Chesser
+    background-size: cover;
   }
   h2 {
     margin: 0;

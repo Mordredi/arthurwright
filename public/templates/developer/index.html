@@ -1,15 +1,17 @@
 <div class="page-nav">
   <ul>
-    <li><a ng-click="gotoAnchor('about')">About</a></li>
     <li><a ng-click="gotoAnchor('projects')">Projects</a></li>
     <li><a ng-click="gotoAnchor('rates')">Rates</a></li>
+    <li><a ng-click="gotoAnchor('rates')">Contact</a></li>
   </ul>
 </div>
-<div id="about" class="hero">
+<div class="image developer">
   <h1>Web Developer</h1>
 </div>
-<div id="projects" class="section">
+<div class="image projects">
   <h2>Projects</h2>
+</div>
+<div id="projects" class="section">
   <div ng-repeat="project in projects">
     <h3>{{ project.name }}</h3>
     <img class="project-image" ng-src="{{ project.image }}" alt="{{project.name}}" />
@@ -18,6 +20,15 @@
     <a ng-href="{{ project.git }}" target="_blank">Git Repo</a>
   </div>
 </div>
-<div class="section" id="rates">
+<div class="image rates">
   <h2>Rates</h2>
+</div>
+<div class="section" id="rates">
+
+</div>
+<div class="image contact">
+  <h2>Contact</h2>
+</div>
+<div class="section" id="contact">
+
 </div>
