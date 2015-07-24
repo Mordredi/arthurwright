@@ -9,17 +9,8 @@
   <base href="/">
 </head>
 <body>
-  <header>
-    <div class="logo"><a href="/">Arthur Wright</a></div>
-    <nav class="main-nav">
-      <ul>
-        <li><a ng-href="/performer">Performer</a></li>
-        <li><a ng-href="/developer">Web Developer</a></li>
-        <li><a ng-href="/blog">Blog</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main ng-view  ng-controller="AnchorScrollController"></main>
+  <aw-page-nav></aw-page-nav>
+  <main ng-view></main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
@@ -29,8 +20,9 @@
     <!-- App -->
     <script src="../js/app.js"></script>
     <script src="../js/routes.js"></script>
+    <!-- Directives -->
+    <script src="../js/directives/awPageNav.js"></script>
     <!-- Controllers -->
-    <script src="../js/controllers/anchorScrollController.js"></script>
     <script src="../js/controllers/blogIndexController.js"></script>
     <script src="../js/controllers/blogShowController.js"></script>
     <script src="../js/controllers/adminBlogController.js"></script>
