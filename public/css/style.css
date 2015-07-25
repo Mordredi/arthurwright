@@ -84,11 +84,13 @@ header {
   height: auto; }
 
 .section {
-  text-align: center;
+  background: #fff6d8;
   height: 100vh;
   width: 100vw;
-  background-color: #fff;
+  padding: 10rem 5rem;
   overflow: hidden; }
+  .section h1 {
+    margin: 0; }
   .section p {
     margin: 0; }
 

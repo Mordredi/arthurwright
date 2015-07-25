@@ -1,7 +1,10 @@
 <div class="page-nav">
-  <h1><a href="/">Arthur Wright</a></h1>
+  <h1><a ng-href="/" ng-click="loadNav('home')">Arthur Wright</a></h1>
   <ul>
     <li ng-repeat='link in navLinks'><a ng-click="gotoAnchor(link[1])">{{link[0]}}</a></li>
     </li>
+    <li><a ng-href="/performer" ng-click="loadNav('performer')">Performer</a></li>
+    <li><a ng-href="/developer" ng-click="loadNav('developer')">Developer</a></li>
+    <li><a ng-href="/blog" ng-click="loadNav('blog')">Blog</a></li>
   </ul>
 </div>
