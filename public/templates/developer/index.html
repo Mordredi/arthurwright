@@ -8,7 +8,7 @@
   <h2>Projects</h2>
 </div>
 <div id="projects" class="section">
-  <div ng-repeat="project in projects">
+  <div ng-repeat="project in projects" class="project">
     <h3>{{ project.name }}</h3>
     <img class="project-image" ng-src="{{ project.image }}" alt="{{project.name}}" />
     <p>{{ project.description }}</p>

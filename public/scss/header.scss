@@ -29,13 +29,14 @@ header {
 .page-nav {
   position: fixed;
   top: 2rem;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   height: 5rem;
   display: flex;
   padding: 0 1rem;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   background: hsla(123, 100%, 38%, .3);
   ul {
     display: flex;
@@ -53,46 +54,64 @@ header {
     }
 }
 
-// main {
-//   margin-top: 2rem;
-// }
-
 .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
-  padding-top: 40vh;
-  text-align: center;
   color: #fff;
   text-shadow: 0 1px 1px #333;
   &.about {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/AW_135.jpg') no-repeat fixed;
     background-size: cover;
   }
   &.performer {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/widow.jpg') no-repeat fixed, #000;
     background-size: cover;
   }
   &.developer {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/developer.jpeg') no-repeat fixed; //image by William Ivan
     background-size: cover;
   }
   &.contact {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/unsplash-bonus.jpg') bottom no-repeat fixed; //image supplied by Luke Chesser
     background-size: cover;
   }
   &.blog {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 1)),
+    background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/blog.jpg') center no-repeat fixed; //image supplied by Luke Chesser
+    background-size: cover;
+  }
+  &.projects {
+    background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
+    url('../img/tvchat.png') center no-repeat fixed; //image supplied by Luke Chesser
+    background-size: cover;
+  }
+  &.rates {
+    background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
+    url('../img/mac-glasses.JPG') center no-repeat fixed; //image supplied by Luke Chesser
     background-size: cover;
   }
   h2 {
     margin: 0;
     color: #fff;
+    font-size: 6rem;
   }
+  h1 {
+    font-size: 8rem;
+  }
+}
+
+.nav-break {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: .5rem;
+  font-size: 1.3rem;
 }
 
 .project-image {
@@ -101,10 +120,10 @@ header {
 }
 
 .section {
-  background: #fff6d8;
+  background: #eee;
   height: 100vh;
   width: 100vw;
-  padding: 10rem 5rem;
+  padding: 9rem 5rem;
   overflow: hidden;
   h1 {
     margin: 0;
@@ -114,9 +133,16 @@ header {
   }
 }
 
-h1 {
-  font-size: 3rem;
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+}
 
+.project {
+  width: 30vw;
+  box-shadow: 0 1px 1px #333;
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
