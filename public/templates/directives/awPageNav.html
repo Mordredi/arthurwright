@@ -1,11 +1,14 @@
 <div class="page-nav">
-  <h1><a ng-href="/" ng-click="loadNav('home')">Arthur Wright</a></h1>
+  <h1><a ng-click="changePage('/')">Arthur Wright</a></h1>
+  <div class="hamburger">
+    <span></span>
+  </div>
   <ul>
     <li ng-repeat='link in navLinks'><a ng-click="gotoAnchor(link[1])">{{link[0]}}</a></li>
     </li>
     <li ng-show="navLinks"><span class="nav-break">|</span></li>
-    <li><a ng-href="/performer" ng-click="loadNav('performer')">Performer</a></li>
-    <li><a ng-href="/developer" ng-click="loadNav('developer')">Developer</a></li>
-    <li><a ng-href="/blog" ng-click="loadNav('blog')">Blog</a></li>
+    <li><a ng-click="changePage('performer')">Performer</a></li>
+    <li><a ng-click="changePage('developer')">Developer</a></li>
+    <li><a ng-click="changePage('blog')">Blog</a></li>
   </ul>
 </div>

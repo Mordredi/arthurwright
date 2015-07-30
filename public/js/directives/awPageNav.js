@@ -1,4 +1,4 @@
-angular.module("ArthurWright").directive('awPageNav', function(){
+angular.module("ArthurWright").directive('awPageNav', ['$location', '$rootScope',  function($location, $rootScope){
   return {
     replace: true,
     restrict: "E",
@@ -6,21 +6,36 @@ angular.module("ArthurWright").directive('awPageNav', function(){
     link: function($scope) {
       var navLinks = {
         "home": [['About', 'about'], ['Performer', 'performer'], ['Web Developer', 'web-developer'], ['Blog', 'blog'], ['Contact', 'contact']],
-        "developer": [['About', 'about'], ['Projects', 'projects'], ['Rates', 'rates'], ['Contact', 'contact']]
+        "developer": [['About', 'about'], ['Projects', 'projects'], ['Rates', 'rates'], ['Contact', 'contact']],
+        "performer": [['Bio', 'bio'], ['Upcoming', 'upcoming'], ['Videos', 'videos'], ['Photos', 'photos'], ['Contact', 'contact']]
       };
-      if (window.location.pathname === '/') {
-        $scope.navLinks = navLinks["home"];
-      } else if (window.location.pathname === '/developer') {
-        $scope.navLinks = navLinks["developer"];
-      }
-      $scope.loadNav = function(nav) {
-       $scope.navLinks = navLinks[nav];
+
+      $rootScope.$on('$locationChangeSuccess', function () {
+        var path = $location.path();
+        locationChange(path);
+      });
+
+      var locationChange = function(path) {
+        if (path === '/') {
+          $scope.navLinks = navLinks["home"];
+        } else if (path === '/developer') {
+          $scope.navLinks = navLinks["developer"];
+        } else if (path === '/performer') {
+          $scope.navLinks = navLinks["performer"];
+        } else {
+          $scope.navLinks = null;
+        }
+      };
+
+      locationChange($location.path());
+
+      $scope.changePage = function(nav) {
+       $location.path(nav);
       }
       $scope.gotoAnchor = function(anchor) {
-        console.log(anchor);
         var target = $('#' + anchor);
         $('html,body').animate( { scrollTop: target.offset().top } , 1000);
       }
     }
   }
-});
+}]);

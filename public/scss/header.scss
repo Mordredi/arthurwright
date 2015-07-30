@@ -1,3 +1,42 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Lora', serif;
+}
+
+.hamburger {
+  position: absolute;
+  left: 20rem;
+  top: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 2rem 0.75rem 0px
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  cursor: pointer;
+  height: .25rem;
+  width: 2rem;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  box-shadow: 0 1px 1px #000;
+}
+
+.hamburger span::before {
+  top: -.5rem;
+}
+
+.hamburger span::after {
+  bottom: -.5rem;
+  transform-origin: 50% 50%;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -12,6 +51,7 @@ header {
   .logo {
     font-size: 1rem;
   }
+
   ul {
     list-style: none;
     display: flex;
@@ -120,21 +160,52 @@ header {
 }
 
 .section {
-  background: #eee;
+  background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7));
   height: 100vh;
   width: 100vw;
   padding: 9rem 5rem;
   overflow: hidden;
+  .text {
+    text-align: center;
+    background: hsla(0, 0%, 100%, .3);
+    padding: 3rem;
+  }
   h1 {
     margin: 0;
   }
   p {
+    color: #333;
+    text-shadow: 0 1px 1px #ccc;
     margin: 0;
+    margin-bottom: 1rem;
+  }
+  .contact {
+    text-align: center;
   }
 }
 
-h1, h2 {
+.btn {
+  text-decoration: none;
+  padding: .5rem 1rem;
+  background: hsl(110, 100%, 35%);
+  box-shadow: 1px 1px 1px #333;
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
+  &:hover {
+    background: hsl(119, 100%, 24%);
+  }
+  &:active {
+    background: hsl(119, 100%, 24%);
+    box-shadow: none;
+  }
+}
+
+h1, h2, .signature {
   font-family: 'Dancing Script', cursive;
+}
+
+.signature {
+  font-size: 1.5rem;
 }
 
 .project {
