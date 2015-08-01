@@ -1,4 +1,4 @@
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -7,10 +7,8 @@ body {
   font-family: 'Lora', serif;
 }
 
+
 .hamburger {
-  position: absolute;
-  left: 20rem;
-  top: 1rem;
   cursor: pointer;
   padding: 0.5rem 2rem 0.75rem 0px
 }
@@ -25,7 +23,7 @@ body {
   position: absolute;
   display: block;
   content: '';
-  box-shadow: 0 1px 1px #000;
+  box-shadow: 2px 2px 2px #000;
 }
 
 .hamburger span::before {
@@ -37,38 +35,9 @@ body {
   transform-origin: 50% 50%;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2rem;
-  box-shadow: 0 1px 1px #333;
-  background: #bd72ff;
-  .logo {
-    font-size: 1rem;
-  }
-
-  ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  a {
-    text-decoration: none;
-    padding: .5rem 1rem;
-    color: #fff;
-    text-shadow: 0 1px 1px #333;
-  }
-}
-
 .page-nav {
   position: fixed;
-  top: 2rem;
+  top: 0;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   height: 5rem;
   display: flex;
@@ -78,21 +47,46 @@ header {
   width: 100vw;
   font-size: 1.3rem;
   background: hsla(123, 100%, 38%, .3);
+  margin: 0;
+  h1 {
+    font-size: 2rem;
+  }
   ul {
+    margin: 0;
     display: flex;
+    position: fixed;
+    top: -1000rem;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
+    background: hsla(123, 100%, 38%, .3);
+    hr {
+      width: 90%;
+    }
     li {
+      width: 12rem;
+      text-align: center;
       list-style: none;
+      padding: .5rem;
+    }
+    &.open {
+      top: 5rem;
+      right: 0;
+    }
+    .nav-break {
+      display: none;
     }
   }
   a {
-      text-decoration: none;
-      padding: .5rem;
-      color: #fff;
-      text-shadow: 1px 1px 1px #000;
-      cursor: pointer;
-    }
+    text-decoration: none;
+    padding: .5rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+  }
 }
+
+
 
 .image {
   display: flex;
@@ -102,20 +96,24 @@ header {
   height: 100vh;
   color: #fff;
   text-shadow: 0 1px 1px #333;
+  background-position: center;
   &.about {
     background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/AW_135.jpg') no-repeat fixed;
     background-size: cover;
+    background-position: center;
   }
   &.performer {
     background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/widow.jpg') no-repeat fixed, #000;
     background-size: cover;
+    background-position: center right;
   }
   &.developer {
     background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/developer.jpeg') no-repeat fixed; //image by William Ivan
     background-size: cover;
+    background-position: center;
   }
   &.contact {
     background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
@@ -140,10 +138,10 @@ header {
   h2 {
     margin: 0;
     color: #fff;
-    font-size: 6rem;
+    font-size: 3rem;
   }
   h1 {
-    font-size: 8rem;
+    font-size: 3.4rem;
   }
 }
 
@@ -161,14 +159,17 @@ header {
 
 .section {
   background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7));
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  padding: 9rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  padding: 6rem 0 1rem;
   .text {
     text-align: center;
     background: hsla(0, 0%, 100%, .3);
-    padding: 3rem;
+    padding: 1rem;
   }
   h1 {
     margin: 0;
@@ -218,4 +219,47 @@ h1, h2, .signature {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+@media screen and (min-width: 500px) {
+  .page-nav {
+    top: 2rem;
+    ul {
+      background: none;
+      position: static;
+      flex-direction: row;
+      .nav-break {
+        display: inline;
+      }
+      hr {
+        display: none;
+      }
+      li {
+        width: inherit;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .section {
+    padding: 0 4rem;
+    .text {
+      padding: 3rem;
+    }
+  }
+
+  .image {
+    h1 {
+      font-size: 8rem;
+    }
+    h2 {
+      font-size: 6rem;
+    }
+    &.performer, &.about, &.performer {
+      background-position: initial;
+    }
+  }
 }

@@ -3,10 +3,11 @@
   <div class="hamburger">
     <span></span>
   </div>
-  <ul>
+  <ul class="nav">
     <li ng-repeat='link in navLinks'><a ng-click="gotoAnchor(link[1])">{{link[0]}}</a></li>
     </li>
-    <li ng-show="navLinks"><span class="nav-break">|</span></li>
+    <li ng-show="navLinks" class="nav-break"><span>|</span></li>
+    <hr>
     <li><a ng-click="changePage('performer')">Performer</a></li>
     <li><a ng-click="changePage('developer')">Developer</a></li>
     <li><a ng-click="changePage('blog')">Blog</a></li>

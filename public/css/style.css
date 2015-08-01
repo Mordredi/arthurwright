@@ -1,4 +1,4 @@
-*, *:before, *:after {
+*, *::before, *::after {
   box-sizing: border-box; }
 
 body {
@@ -6,9 +6,6 @@ body {
   font-family: 'Lora', serif; }
 
 .hamburger {
-  position: absolute;
-  left: 20rem;
-  top: 1rem;
   cursor: pointer;
   padding: 0.5rem 2rem 0.75rem 0px; }
 
@@ -22,7 +19,7 @@ body {
   position: absolute;
   display: block;
   content: '';
-  box-shadow: 0 1px 1px #000; }
+  box-shadow: 2px 2px 2px #000; }
 
 .hamburger span::before {
   top: -.5rem; }
@@ -31,33 +28,9 @@ body {
   bottom: -.5rem;
   transform-origin: 50% 50%; }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2rem;
-  box-shadow: 0 1px 1px #333;
-  background: #bd72ff; }
-  header .logo {
-    font-size: 1rem; }
-  header ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0; }
-  header a {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    text-shadow: 0 1px 1px #333; }
-
 .page-nav {
   position: fixed;
-  top: 2rem;
+  top: 0;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   height: 5rem;
   display: flex;
@@ -66,17 +39,36 @@ header {
   align-items: center;
   width: 100vw;
   font-size: 1.3rem;
-  background: rgba(0, 194, 10, 0.3); }
+  background: rgba(0, 194, 10, 0.3);
+  margin: 0; }
+  .page-nav h1 {
+    font-size: 2rem; }
   .page-nav ul {
+    margin: 0;
     display: flex;
-    padding: 0; }
+    position: fixed;
+    top: -1000rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    background: rgba(0, 194, 10, 0.3); }
+    .page-nav ul hr {
+      width: 90%; }
     .page-nav ul li {
-      list-style: none; }
+      width: 12rem;
+      text-align: center;
+      list-style: none;
+      padding: .5rem; }
+    .page-nav ul.open {
+      top: 5rem;
+      right: 0; }
+    .page-nav ul .nav-break {
+      display: none; }
   .page-nav a {
     text-decoration: none;
     padding: .5rem;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 2px 2px 2px #000;
     cursor: pointer; }
 
 .image {
@@ -86,16 +78,20 @@ header {
   width: 100vw;
   height: 100vh;
   color: #fff;
-  text-shadow: 0 1px 1px #333; }
+  text-shadow: 0 1px 1px #333;
+  background-position: center; }
   .image.about {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/AW_135.jpg") no-repeat fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center; }
   .image.performer {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/widow.jpg") no-repeat fixed, #000;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center right; }
   .image.developer {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/developer.jpeg") no-repeat fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center; }
   .image.contact {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/unsplash-bonus.jpg") bottom no-repeat fixed;
     background-size: cover; }
@@ -111,9 +107,9 @@ header {
   .image h2 {
     margin: 0;
     color: #fff;
-    font-size: 6rem; }
+    font-size: 3rem; }
   .image h1 {
-    font-size: 8rem; }
+    font-size: 3.4rem; }
 
 .nav-break {
   color: white;
@@ -127,14 +123,17 @@ header {
 
 .section {
   background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7));
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  padding: 9rem 5rem;
-  overflow: hidden; }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 6rem 0 1rem; }
   .section .text {
     text-align: center;
     background: rgba(255, 255, 255, 0.3);
-    padding: 3rem; }
+    padding: 1rem; }
   .section h1 {
     margin: 0; }
   .section p {
@@ -173,3 +172,29 @@ h1, h2, .signature {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
+
+@media screen and (min-width: 500px) {
+  .page-nav {
+    top: 2rem; }
+    .page-nav ul {
+      background: none;
+      position: static;
+      flex-direction: row; }
+      .page-nav ul .nav-break {
+        display: inline; }
+      .page-nav ul hr {
+        display: none; }
+      .page-nav ul li {
+        width: inherit; }
+  .hamburger {
+    display: none; }
+  .section {
+    padding: 0 4rem; }
+    .section .text {
+      padding: 3rem; }
+  .image h1 {
+    font-size: 8rem; }
+  .image h2 {
+    font-size: 6rem; }
+  .image.performer, .image.about, .image.performer {
+    background-position: initial; } }

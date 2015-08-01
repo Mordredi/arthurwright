@@ -36,6 +36,15 @@ angular.module("ArthurWright").directive('awPageNav', ['$location', '$rootScope'
         var target = $('#' + anchor);
         $('html,body').animate( { scrollTop: target.offset().top } , 1000);
       }
+
+      $('.hamburger').on('click', function(){
+        $('.nav').toggleClass('open');
+        $('a').on('click', function(){
+          $('.nav').removeClass('open');
+        })
+      });
+
     }
+
   }
 }]);
