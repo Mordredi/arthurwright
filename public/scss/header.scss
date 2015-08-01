@@ -109,9 +109,15 @@ body {
     background-size: cover;
     background-position: center right;
   }
-  &.developer {
+  &.upcoming {
     background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/developer.jpeg') no-repeat fixed; //image by William Ivan
+    background-size: cover;
+    background-position: center;
+  }
+  &.developer {
+    background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
+    url('../img/developer.jpg') no-repeat fixed; //image by Aleksi Tappura
     background-size: cover;
     background-position: center;
   }
@@ -133,6 +139,11 @@ body {
   &.rates {
     background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
     url('../img/mac-glasses.JPG') center no-repeat fixed; //image supplied by Luke Chesser
+    background-size: cover;
+  }
+  &.photos {
+   background: linear-gradient(to right, rgba(255, 255, 255, .3),  hsla(241, 22%, 60%, .7)),
+    url('../img/photo.jpeg') center no-repeat fixed; //image supplied by Jeff Sheldon
     background-size: cover;
   }
   h2 {

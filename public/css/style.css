@@ -88,8 +88,12 @@ body {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/widow.jpg") no-repeat fixed, #000;
     background-size: cover;
     background-position: center right; }
-  .image.developer {
+  .image.upcoming {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/developer.jpeg") no-repeat fixed;
+    background-size: cover;
+    background-position: center; }
+  .image.developer {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/developer.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center; }
   .image.contact {
@@ -103,6 +107,9 @@ body {
     background-size: cover; }
   .image.rates {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/mac-glasses.JPG") center no-repeat fixed;
+    background-size: cover; }
+  .image.photos {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/photo.jpeg") center no-repeat fixed;
     background-size: cover; }
   .image h2 {
     margin: 0;
