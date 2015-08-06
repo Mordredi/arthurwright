@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var http = require('http').Server(app);
+var bcrypt = require('bcrypt');
 var session = require('express-session');
 var morgan = require('morgan');
 var mongoose = require('mongoose');
