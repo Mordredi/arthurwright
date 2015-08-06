@@ -1,13 +1,17 @@
-<p ng-show="usernameRequired">{{usernameRequired}}</p>
-<p ng-show="passwordRequired">{{passwordRequired}}</p>
-<form class="login">
-  <div class="form-field">
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" ng-model="adminInfo.username">
+<div class="section">
+  <div class="text">
+    <p ng-show="usernameRequired">{{usernameRequired}}</p>
+    <p ng-show="passwordRequired">{{passwordRequired}}</p>
+    <form class="login">
+      <div class="form-field">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" ng-model="adminInfo.username">
+      </div>
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" ng-model="adminInfo.password">
+      </div>
+      <button type="submit" ng-click="saveData(adminInfo)">Login</button>
+    </form>
   </div>
-  <div class="form-field">
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" ng-model="adminInfo.password">
-  </div>
-  <button type="submit" ng-click="saveData(adminInfo)">Login</button>
-</form>
+</div>

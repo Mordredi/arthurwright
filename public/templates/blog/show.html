@@ -1,4 +1,8 @@
-<h1>Blog Show</h1>
-<h2>{{post.title}}</h2>
-<p>{{post.article}}</p>
-<a ng-href="/blog">Return to blog</a>
+<div class="section">
+  <div class="text post">
+    <h2>{{post.title}}</h2>
+    <p class="meta">{{post.date | date: 'fullDate'}}</p>
+    <p>{{post.article}}</p>
+    <a ng-href="/blog">Return to blog</a>
+  </div>
+</div>

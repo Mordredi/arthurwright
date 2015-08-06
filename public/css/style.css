@@ -4,6 +4,8 @@
 body {
   line-height: 1.5;
   font-family: 'Lora', serif; }
+  body a {
+    color: #1eb300; }
 
 .hamburger {
   cursor: pointer;
@@ -38,7 +40,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   background: rgba(0, 194, 10, 0.3);
   margin: 0; }
   .page-nav h1 {
@@ -71,6 +73,13 @@ body {
     text-shadow: 2px 2px 2px #000;
     cursor: pointer; }
 
+.photos ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .photos ul .photo {
+    max-height: 20rem; }
+
 .image {
   display: flex;
   justify-content: center;
@@ -78,38 +87,41 @@ body {
   width: 100vw;
   height: 100vh;
   color: #fff;
-  text-shadow: 0 1px 1px #333;
+  text-shadow: 2px 2px 1px #000;
   background-position: center; }
   .image.about {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/AW_135.jpg") no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/AW_135-compressed.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center; }
   .image.performer {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/widow.jpg") no-repeat fixed, #000;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/widow.jpg") no-repeat fixed, #000;
     background-size: cover;
     background-position: center right; }
-  .image.upcoming {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/developer.jpeg") no-repeat fixed;
+  .image.upcoming-img {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/contact.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center; }
   .image.developer {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/developer.jpg") no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/developer-compressed.jpg") no-repeat fixed;
     background-size: cover;
     background-position: center; }
   .image.contact {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/unsplash-bonus.jpg") bottom no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/unsplash-bonus-compressed.jpg") bottom no-repeat fixed;
     background-size: cover; }
   .image.blog {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/blog.jpg") center no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/Optimized-blog.jpg") center no-repeat fixed;
     background-size: cover; }
-  .image.projects {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/tvchat.png") center no-repeat fixed;
+  .image.project-img {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/tvchat.png") center no-repeat fixed;
     background-size: cover; }
   .image.rates {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/mac-glasses.JPG") center no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/mac-glasses-compressed.jpg") center no-repeat fixed;
     background-size: cover; }
   .image.photos {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7)), url("../img/photo.jpeg") center no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/photo-compressed.jpg") center no-repeat fixed;
+    background-size: cover; }
+  .image.video-img {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/video-compressed.jpg") center no-repeat fixed;
     background-size: cover; }
   .image h2 {
     margin: 0;
@@ -129,7 +141,7 @@ body {
   height: auto; }
 
 .section {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(131, 131, 175, 0.7));
+  background: #eee;
   min-height: 100vh;
   width: 100vw;
   display: flex;
@@ -137,21 +149,42 @@ body {
   justify-content: center;
   overflow: hidden;
   padding: 6rem 0 1rem; }
+  .section ul {
+    padding: 0;
+    margin: 0; }
+  .section li {
+    list-style: none; }
   .section .text {
+    width: inherit;
     text-align: center;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 1px 2px 4px #333;
     padding: 1rem; }
+    .section .text h2 {
+      color: #006600;
+      text-shadow: 2px 2px 1px #ccc; }
+  .section .post h2, .section .post p, .section .blog h2, .section .blog p, .section .photos h2, .section .photos p, .section .videos h2, .section .videos p {
+    text-shadow: none; }
+  .section .post .meta, .section .blog .meta, .section .photos .meta, .section .videos .meta {
+    font-size: .8rem;
+    color: #777; }
+  .section .photo {
+    max-width: 20rem;
+    margin: .5rem 0; }
+  .section .video {
+    margin: .5rem 0;
+    width: 15rem; }
   .section h1 {
     margin: 0; }
   .section p {
     color: #333;
-    text-shadow: 0 1px 1px #ccc;
-    margin: 0;
-    margin-bottom: 1rem; }
+    margin: .5rem 0; }
   .section .contact {
     text-align: center; }
 
 .btn {
+  display: inline-block;
+  margin: .5rem 0;
   text-decoration: none;
   padding: 0.5rem 1rem;
   background: #1eb300;
@@ -170,12 +203,22 @@ h1, h2, .signature {
 .signature {
   font-size: 1.5rem; }
 
+.projects, .videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
 .project {
-  width: 30vw;
+  width: 100%;
   box-shadow: 0 1px 1px #333;
-  padding: 1rem;
+  padding: 1.17rem;
   text-align: center;
-  background: #fff; }
+  background: #fff;
+  margin-bottom: 1rem; }
+  .project h3 {
+    margin-top: 0; }
+  .project p {
+    text-shadow: none; }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
@@ -193,12 +236,21 @@ h1, h2, .signature {
         display: none; }
       .page-nav ul li {
         width: inherit; }
+  .project {
+    width: 20rem;
+    height: 20rem; }
   .hamburger {
     display: none; }
   .section {
-    padding: 0 4rem; }
+    padding: 9rem 4rem; }
     .section .text {
       padding: 3rem; }
+      .section .text h2 {
+        margin: 0; }
+    .section .photos {
+      padding: 1rem; }
+      .section .photos h2 {
+        margin-bottom: 1rem; }
   .image h1 {
     font-size: 8rem; }
   .image h2 {

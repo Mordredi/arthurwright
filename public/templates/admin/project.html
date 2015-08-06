@@ -1,25 +1,28 @@
-<h1>New Project</h1>
-<form ng-submit="newProject(project)">
-  <div class="form-field">
-    <label for="name">Name</label>
-    <input type="text" id="name" ng-model="project.name">
+<div class="section">
+  <div class="text">
+    <form ng-submit="newProject(project)">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" ng-model="project.name">
+      </div>
+      <div class="form-field">
+        <label for="description">Description</label>
+        <textarea id="description" ng-model="project.description"></textarea>
+      </div>
+      <div class="form-field">
+        <label for="url">Url</label>
+        <input type="text" id="url" ng-model="project.url">
+      </div>
+      <div class="form-field">
+        <label for="image">Image</label>
+        <input type="text" id="image" ng-model="project.image">
+      </div>
+      <div class="form-field">
+        <label for="git">Git</label>
+        <input type="text" id="git" ng-model="project.git">
+      </div>
+      <button>Save Project</button>
+    </form>
+    <a href="/admin">Return to Admin</a>
   </div>
-  <div class="form-field">
-    <label for="description">Description</label>
-    <textarea id="description" ng-model="project.description"></textarea>
-  </div>
-  <div class="form-field">
-    <label for="url">Url</label>
-    <input type="text" id="url" ng-model="project.url">
-  </div>
-  <div class="form-field">
-    <label for="image">Image</label>
-    <input type="text" id="image" ng-model="project.image">
-  </div>
-  <div class="form-field">
-    <label for="git">Git</label>
-    <input type="text" id="git" ng-model="project.git">
-  </div>
-  <button>Save Project</button>
-</form>
-<a href="/admin">Return to Admin</a>
+</div>
