@@ -23,7 +23,7 @@ h1, h2, .signature {
   font-size: 1.2rem;
   background: rgba(0, 194, 10, 0.3);
   margin: 0; }
-  .page-nav h1 {
+  .page-nav .logo {
     font-size: 2rem; }
   .page-nav ul {
     margin: 0;
@@ -37,10 +37,10 @@ h1, h2, .signature {
     .page-nav ul hr {
       width: 90%; }
     .page-nav ul li {
-      width: 12rem;
+      width: 10rem;
+      padding: .5rem;
       text-align: center;
-      list-style: none;
-      padding: .5rem; }
+      list-style: none; }
     .page-nav ul.open {
       top: 5rem;
       right: 0; }
@@ -51,6 +51,7 @@ h1, h2, .signature {
       padding: .5rem;
       font-size: 1.3rem; }
   .page-nav a {
+    display: inline-block;
     text-decoration: none;
     padding: .5rem;
     color: #fff;
@@ -91,9 +92,11 @@ h1, h2, .signature {
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 950px) {
   .page-nav {
     top: 2rem; }
+    .page-nav .logo {
+      font-size: 2rem; }
     .page-nav ul {
       background: none;
       position: static;
@@ -131,7 +134,7 @@ h1, h2, .signature {
   bottom: -.5rem;
   transform-origin: 50% 50%; }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 950px) {
   .hamburger {
     display: none; } }
 
@@ -187,11 +190,17 @@ h1, h2, .signature {
 
 @media screen and (min-width: 500px) {
   .image h1 {
-    font-size: 8rem; }
+    font-size: 5rem; }
   .image h2 {
-    font-size: 6rem; }
+    font-size: 3rem; }
   .image.performer, .image.about {
     background-position: initial; } }
+
+@media screen and (min-width: 700px) {
+  .image h1 {
+    font-size: 7rem; }
+  .image h2 {
+    font-size: 5rem; } }
 
 .btn {
   display: inline-block;
