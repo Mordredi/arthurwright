@@ -1,0 +1,15 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Lora', serif;
+  a {
+    color: hsl(110, 100%, 35%);
+  }
+}
+
+h1, h2, .signature {
+  font-family: 'Dancing Script', cursive;
+}

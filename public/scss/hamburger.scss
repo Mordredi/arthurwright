@@ -1,0 +1,32 @@
+.hamburger {
+  cursor: pointer;
+  padding: 0.5rem 2rem 0.75rem 0px
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  cursor: pointer;
+  height: .25rem;
+  width: 2rem;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  box-shadow: 2px 2px 2px #000;
+}
+
+.hamburger span::before {
+  top: -.5rem;
+}
+
+.hamburger span::after {
+  bottom: -.5rem;
+  transform-origin: 50% 50%;
+}
+
+@media screen and (min-width: 500px) {
+  .hamburger {
+    display: none;
+  }
+}

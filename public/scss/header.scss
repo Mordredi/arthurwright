@@ -1,43 +1,3 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-body {
-  line-height: 1.5;
-  font-family: 'Lora', serif;
-  a {
-    color: hsl(110, 100%, 35%);
-  }
-}
-
-
-.hamburger {
-  cursor: pointer;
-  padding: 0.5rem 2rem 0.75rem 0px
-}
-
-.hamburger span,
-.hamburger span::before,
-.hamburger span::after {
-  cursor: pointer;
-  height: .25rem;
-  width: 2rem;
-  background: white;
-  position: absolute;
-  display: block;
-  content: '';
-  box-shadow: 2px 2px 2px #000;
-}
-
-.hamburger span::before {
-  top: -.5rem;
-}
-
-.hamburger span::after {
-  bottom: -.5rem;
-  transform-origin: 50% 50%;
-}
-
 .page-nav {
   position: fixed;
   top: 0;
@@ -49,7 +9,7 @@ body {
   align-items: center;
   width: 100vw;
   font-size: 1.2rem;
-  background: hsla(123, 100%, 38%, .3);
+  background: $nav-color;
   margin: 0;
   h1 {
     font-size: 2rem;
@@ -62,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0;
-    background: hsla(123, 100%, 38%, .3);
+    background: $nav-color;
     hr {
       width: 90%;
     }
@@ -78,6 +38,10 @@ body {
     }
     .nav-break {
       display: none;
+      color: white;
+      text-shadow: 1px 1px 1px black;
+      padding: .5rem;
+      font-size: 1.3rem;
     }
   }
   a {
@@ -100,172 +64,12 @@ body {
   }
 }
 
-.image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  color: #fff;
-  text-shadow: 2px 2px 1px #000;
-  background-position: center;
-  &.about {
-    background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/AW_135-compressed.jpg') no-repeat fixed;
-    background-size: cover;
-    background-position: center;
-  }
-  &.performer {
-    background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/widow.jpg') no-repeat fixed, #000;
-    background-size: cover;
-    background-position: center right;
-  }
-  &.upcoming-img {
-    background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/contact.jpg') no-repeat fixed; //image by William Ivan
-    background-size: cover;
-    background-position: center;
-  }
-  &.developer {
-    background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/developer-compressed.jpg') no-repeat fixed; //image by Aleksi Tappura
-    background-size: cover;
-    background-position: center;
-  }
-  &.contact {
-    background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/unsplash-bonus-compressed.jpg') bottom no-repeat fixed; //image supplied by Luke Chesser
-    background-size: cover;
-  }
-  &.blog {
-    background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/Optimized-blog.jpg') center no-repeat fixed; //image supplied by Luke Chesser
-    background-size: cover;
-  }
-  &.project-img {
-    background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/tvchat.png') center no-repeat fixed; //image supplied by Luke Chesser
-    background-size: cover;
-  }
-  &.rates {
-    background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/mac-glasses-compressed.jpg') center no-repeat fixed; //image supplied by Luke Chesser
-    background-size: cover;
-  }
-  &.photos {
-   background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/photo-compressed.jpg') center no-repeat fixed; //image supplied by Jeff Sheldon
-    background-size: cover;
-  }
-  &.video-img {
-   background: linear-gradient(to right, rgba(255, 255, 255, .3),  rgba(255, 255, 255, .3)),
-    url('../img/video-compressed.jpg') center no-repeat fixed;
-    background-size: cover;
-  }
-  h2 {
-    margin: 0;
-    color: #fff;
-    font-size: 3rem;
-  }
-  h1 {
-    font-size: 3.4rem;
-  }
-}
-
-.nav-break {
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  padding: .5rem;
-  font-size: 1.3rem;
-}
-
 .project-image {
   width: 15rem;
   height: auto;
 }
 
-.section {
-  background: #eee;
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 6rem 0 1rem;
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    list-style: none;
-  }
-  .text {
-    width: inherit;
-    text-align: center;
-    background: hsla(0, 0%, 100%, .9);
-    box-shadow: 1px 2px 4px #333;
-    padding: 1rem;
-    h2 {
-      color: hsla(120, 100%, 20% ,1);
-      text-shadow: 2px 2px 1px #ccc;
-    }
-  }
 
-  .post, .blog, .photos, .videos {
-    h2, p {
-      text-shadow: none;
-    }
-    .meta {
-      font-size: .8rem;
-      color: #777;
-    }
-  }
-
-  .photo {
-    max-width: 20rem;
-    margin: .5rem 0;
-  }
-
-  .video {
-    margin: .5rem 0;
-    width: 15rem;
-  }
-
-  h1 {
-    margin: 0;
-  }
-  p {
-    color: #333;
-    margin: .5rem 0;
-  }
-  .contact {
-    text-align: center;
-  }
-}
-
-.btn {
-  display: inline-block;
-  margin: .5rem 0;
-  text-decoration: none;
-  padding: .5rem 1rem;
-  background: hsl(110, 100%, 35%);
-  box-shadow: 1px 1px 1px #333;
-  color: #fff;
-  text-shadow: 0 1px 1px #333;
-  &:hover {
-    background: hsl(119, 100%, 24%);
-  }
-  &:active {
-    background: hsl(119, 100%, 24%);
-    box-shadow: none;
-  }
-}
-
-h1, h2, .signature {
-  font-family: 'Dancing Script', cursive;
-}
 
 .signature {
   font-size: 1.5rem;
@@ -320,35 +124,4 @@ h1, h2, .signature {
     height: 20rem;
   }
 
-  .hamburger {
-    display: none;
-  }
-
-  .section {
-    padding: 9rem 4rem;
-    .text {
-      padding: 3rem;
-      h2 {
-        margin: 0;
-      }
-    }
-    .photos {
-      padding: 1rem;
-      h2 {
-        margin-bottom: 1rem ;
-      }
-    }
-  }
-
-  .image {
-    h1 {
-      font-size: 8rem;
-    }
-    h2 {
-      font-size: 6rem;
-    }
-    &.performer, &.about, &.performer {
-      background-position: initial;
-    }
-  }
 }

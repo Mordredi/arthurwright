@@ -7,28 +7,8 @@ body {
   body a {
     color: #1eb300; }
 
-.hamburger {
-  cursor: pointer;
-  padding: 0.5rem 2rem 0.75rem 0px; }
-
-.hamburger span,
-.hamburger span::before,
-.hamburger span::after {
-  cursor: pointer;
-  height: .25rem;
-  width: 2rem;
-  background: white;
-  position: absolute;
-  display: block;
-  content: '';
-  box-shadow: 2px 2px 2px #000; }
-
-.hamburger span::before {
-  top: -.5rem; }
-
-.hamburger span::after {
-  bottom: -.5rem;
-  transform-origin: 50% 50%; }
+h1, h2, .signature {
+  font-family: 'Dancing Script', cursive; }
 
 .page-nav {
   position: fixed;
@@ -65,7 +45,11 @@ body {
       top: 5rem;
       right: 0; }
     .page-nav ul .nav-break {
-      display: none; }
+      display: none;
+      color: white;
+      text-shadow: 1px 1px 1px black;
+      padding: .5rem;
+      font-size: 1.3rem; }
   .page-nav a {
     text-decoration: none;
     padding: .5rem;
@@ -79,6 +63,77 @@ body {
   justify-content: space-around; }
   .photos ul .photo {
     max-height: 20rem; }
+
+.project-image {
+  width: 15rem;
+  height: auto; }
+
+.signature {
+  font-size: 1.5rem; }
+
+.projects, .videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.project {
+  width: 100%;
+  box-shadow: 0 1px 1px #333;
+  padding: 1.17rem;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 1rem; }
+  .project h3 {
+    margin-top: 0; }
+  .project p {
+    text-shadow: none; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
+
+@media screen and (min-width: 500px) {
+  .page-nav {
+    top: 2rem; }
+    .page-nav ul {
+      background: none;
+      position: static;
+      flex-direction: row; }
+      .page-nav ul .nav-break {
+        display: inline; }
+      .page-nav ul hr {
+        display: none; }
+      .page-nav ul li {
+        width: inherit; }
+  .project {
+    width: 20rem;
+    height: 20rem; } }
+
+.hamburger {
+  cursor: pointer;
+  padding: 0.5rem 2rem 0.75rem 0px; }
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  cursor: pointer;
+  height: .25rem;
+  width: 2rem;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  box-shadow: 2px 2px 2px #000; }
+
+.hamburger span::before {
+  top: -.5rem; }
+
+.hamburger span::after {
+  bottom: -.5rem;
+  transform-origin: 50% 50%; }
+
+@media screen and (min-width: 500px) {
+  .hamburger {
+    display: none; } }
 
 .image {
   display: flex;
@@ -130,15 +185,28 @@ body {
   .image h1 {
     font-size: 3.4rem; }
 
-.nav-break {
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  padding: .5rem;
-  font-size: 1.3rem; }
+@media screen and (min-width: 500px) {
+  .image h1 {
+    font-size: 8rem; }
+  .image h2 {
+    font-size: 6rem; }
+  .image.performer, .image.about {
+    background-position: initial; } }
 
-.project-image {
-  width: 15rem;
-  height: auto; }
+.btn {
+  display: inline-block;
+  margin: .5rem 0;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #1eb300;
+  box-shadow: 1px 1px 1px #333;
+  color: #fff;
+  text-shadow: 0 1px 1px #333; }
+  .btn:hover {
+    background: #027a00; }
+  .btn:active {
+    background: #027a00;
+    box-shadow: none; }
 
 .section {
   background: #eee;
@@ -182,65 +250,7 @@ body {
   .section .contact {
     text-align: center; }
 
-.btn {
-  display: inline-block;
-  margin: .5rem 0;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  background: #1eb300;
-  box-shadow: 1px 1px 1px #333;
-  color: #fff;
-  text-shadow: 0 1px 1px #333; }
-  .btn:hover {
-    background: #027a00; }
-  .btn:active {
-    background: #027a00;
-    box-shadow: none; }
-
-h1, h2, .signature {
-  font-family: 'Dancing Script', cursive; }
-
-.signature {
-  font-size: 1.5rem; }
-
-.projects, .videos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
-
-.project {
-  width: 100%;
-  box-shadow: 0 1px 1px #333;
-  padding: 1.17rem;
-  text-align: center;
-  background: #fff;
-  margin-bottom: 1rem; }
-  .project h3 {
-    margin-top: 0; }
-  .project p {
-    text-shadow: none; }
-
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important; }
-
 @media screen and (min-width: 500px) {
-  .page-nav {
-    top: 2rem; }
-    .page-nav ul {
-      background: none;
-      position: static;
-      flex-direction: row; }
-      .page-nav ul .nav-break {
-        display: inline; }
-      .page-nav ul hr {
-        display: none; }
-      .page-nav ul li {
-        width: inherit; }
-  .project {
-    width: 20rem;
-    height: 20rem; }
-  .hamburger {
-    display: none; }
   .section {
     padding: 9rem 4rem; }
     .section .text {
@@ -250,10 +260,4 @@ h1, h2, .signature {
     .section .photos {
       padding: 1rem; }
       .section .photos h2 {
-        margin-bottom: 1rem; }
-  .image h1 {
-    font-size: 8rem; }
-  .image h2 {
-    font-size: 6rem; }
-  .image.performer, .image.about, .image.performer {
-    background-position: initial; } }
+        margin-bottom: 1rem; } }

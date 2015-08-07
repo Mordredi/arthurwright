@@ -1,0 +1,86 @@
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  text-shadow: 2px 2px 1px #000;
+  background-position: center;
+  &.about {
+    background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/AW_135-compressed.jpg') no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  &.performer {
+    background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/widow.jpg') no-repeat fixed, #000;
+    background-size: cover;
+    background-position: center right;
+  }
+  &.upcoming-img {
+    background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/contact.jpg') no-repeat fixed; //image by William Ivan
+    background-size: cover;
+    background-position: center;
+  }
+  &.developer {
+    background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/developer-compressed.jpg') no-repeat fixed; //image by Aleksi Tappura
+    background-size: cover;
+    background-position: center;
+  }
+  &.contact {
+    background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/unsplash-bonus-compressed.jpg') bottom no-repeat fixed; //image supplied by Luke Chesser
+    background-size: cover;
+  }
+  &.blog {
+    background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/Optimized-blog.jpg') center no-repeat fixed; //image supplied by Luke Chesser
+    background-size: cover;
+  }
+  &.project-img {
+    background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/tvchat.png') center no-repeat fixed; //image supplied by Luke Chesser
+    background-size: cover;
+  }
+  &.rates {
+    background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/mac-glasses-compressed.jpg') center no-repeat fixed; //image supplied by Luke Chesser
+    background-size: cover;
+  }
+  &.photos {
+   background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/photo-compressed.jpg') center no-repeat fixed; //image supplied by Jeff Sheldon
+    background-size: cover;
+  }
+  &.video-img {
+   background: linear-gradient(to right, $image-gradient,  $image-gradient),
+    url('../img/video-compressed.jpg') center no-repeat fixed;
+    background-size: cover;
+  }
+  h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 3rem;
+  }
+  h1 {
+    font-size: 3.4rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .image {
+    h1 {
+      font-size: 8rem;
+    }
+    h2 {
+      font-size: 6rem;
+    }
+    &.performer, &.about {
+      background-position: initial;
+    }
+  }
+}
