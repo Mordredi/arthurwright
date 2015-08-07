@@ -3,6 +3,7 @@ var User = require('../models/user');
 var Post = require('../models/post');
 var Project = require('../models/project');
 var jwt = require('jsonwebtoken');
+var bcrypt = require('bcrypt');
 var config = require('../../config');
 var router = express.Router();
 
@@ -36,16 +37,18 @@ router.post('admin/project', function(req, res){
 
 router.get('/setup', function(req, res) {
 
-  var arthur = new User({
-    username: 'arthur',
-    password: 'password',
-  });
-
-  arthur.save(function(err) {
-    if (err) throw err;
-
-    console.log('User saved successfully');
-    res.json({ success: true });
+  bcrypt.genSalt(10, function(err, salt){
+    bcrypt.hash('password', salt, function(err, hash){
+      var paul = new User({
+        username: 'paul',
+        password: hash
+      });
+      paul.save(function(err) {
+        if (err) throw err;
+        console.log('User saved successfully');
+        res.json({ success: true });
+      });
+    });
   });
 });
 
