@@ -12,7 +12,3 @@ angular.module('ArthurWright').factory('Login', function($http, $localStorage){
     }
   }
 });
-
-// angular.module('ArthurWright').factory('Logout', function($http){
-
-// });

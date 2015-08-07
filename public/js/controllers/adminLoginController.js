@@ -1,5 +1,4 @@
 angular.module('ArthurWright').controller('AdminLoginController', function(Login, $scope, $localStorage, $location){
-  console.log($localStorage.token);
   $scope.saveData = function(adminInfo){
     $scope.usernameRequired = '';
     $scope.passwordRequired = '';
@@ -13,8 +12,12 @@ angular.module('ArthurWright').controller('AdminLoginController', function(Login
 
     if ($scope.adminInfo.username && $scope.adminInfo.password) {
       Login.authenticate({'username': $scope.adminInfo.username, 'password': $scope.adminInfo.password}).then(function(data){
-        $localStorage.token = data.data.token;
-        $location.path('/admin');
+          if(data.data.success){
+            $localStorage.token = data.data.token;
+            $location.path('/admin');
+          } else {
+            console.log(data.data.message);
+          }
       });
     }
   }

@@ -28,8 +28,6 @@ router.post('/authenticate', function(req, res){
   });
 });
 
-
-
 router.post('admin/project', function(req, res){
   var project = new Project({name: req.body.name, description: req.body.description, url: req.body.url, image: req.body.image});
   project.save(function(err, project){
