@@ -1,1 +1,1 @@
-angular.module('ArthurWright', ['ngRoute', 'ngResource']);
+angular.module('ArthurWright', ['ngRoute', 'ngResource', 'ngStorage']);

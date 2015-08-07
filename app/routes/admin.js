@@ -1,26 +1,53 @@
 var express = require('express');
-var passport = require('passport');
 var User = require('../models/user');
 var Post = require('../models/post');
 var Project = require('../models/project');
+var jwt = require('jsonwebtoken');
+var config = require('../../config');
 var router = express.Router();
 
-router.post('/admin/new', function(req, res){
-  User.register(new User({ username: req.body.username}), req.body.password, function(err, user){
-    passport.authenticate('local')(req, res, function(){
-      res.send(req.user);
-    });
+router.post('/authenticate', function(req, res){
+  User.findOne({username: req.body.username}, function(err, user){
+    if (err) throw err;
+    if (!user) {
+      res.json({ success: false, message: 'User not found'});
+    } else if (user) {
+      if (user.password != req.body.password){
+        res.json({success: false, message: 'Incorrect password'});
+      } else {
+        var token = jwt.sign(user, config.secret, {
+          expiresInMinutes: 1440
+        });
+        res.json({
+          success: true,
+          message: "Authenticated",
+          token: token
+        });
+      }
+    }
   });
 });
 
-router.post('/admin/login', passport.authenticate('local'), function(req, res){
-  res.send(req.user);
-});
+
 
 router.post('admin/project', function(req, res){
   var project = new Project({name: req.body.name, description: req.body.description, url: req.body.url, image: req.body.image});
   project.save(function(err, project){
-    console.log('Saved');
+  });
+});
+
+router.get('/setup', function(req, res) {
+
+  var arthur = new User({
+    username: 'arthur',
+    password: 'password',
+  });
+
+  arthur.save(function(err) {
+    if (err) throw err;
+
+    console.log('User saved successfully');
+    res.json({ success: true });
   });
 });
 

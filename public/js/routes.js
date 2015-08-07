@@ -24,7 +24,8 @@ angular.module('ArthurWright').config(function($routeProvider, $locationProvider
     })
 
     .when('/admin', {
-      templateUrl: "../templates/admin/index.html"
+      templateUrl: "../templates/admin/index.html",
+      controller: "AdminLogoutController"
     })
 
     .when('/admin/new', {
