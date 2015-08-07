@@ -13,21 +13,25 @@ router.post('/authenticate', function(req, res){
     if (!user) {
       res.json({ success: false, message: 'User not found'});
     } else if (user) {
-      if (user.password != req.body.password){
-        res.json({success: false, message: 'Incorrect password'});
-      } else {
-        var token = jwt.sign(user, config.secret, {
-          expiresInMinutes: 1440
-        });
-        res.json({
-          success: true,
-          message: "Authenticated",
-          token: token
-        });
-      }
+      bcrypt.compare(req.body.password, user.password, function(err, response) {
+        if (response === false) {
+          res.json({success: false, message: 'Incorrect password'});
+        } else {
+          var token = jwt.sign(user, config.secret, {
+            expiresInMinutes: 1440
+          });
+          res.json({
+            success: true,
+            message: "Authenticated",
+            token: token
+          });
+        }
+      });
     }
   });
 });
+
+
 
 router.post('admin/project', function(req, res){
   var project = new Project({name: req.body.name, description: req.body.description, url: req.body.url, image: req.body.image});
@@ -36,7 +40,6 @@ router.post('admin/project', function(req, res){
 });
 
 router.get('/setup', function(req, res) {
-
   bcrypt.genSalt(10, function(err, salt){
     bcrypt.hash('password', salt, function(err, hash){
       var paul = new User({
