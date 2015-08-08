@@ -12,3 +12,13 @@ angular.module('ArthurWright').factory('Login', function($http, $localStorage){
     }
   }
 });
+
+angular.module('ArthurWright').factory('Users', function($http){
+  return {
+    number: function() {
+      return $http.get('/admin/users').then(function(data){
+        return data;
+      });
+    }
+  }
+});

@@ -31,7 +31,33 @@ router.post('/authenticate', function(req, res){
   });
 });
 
+router.get('/admin/users', function(req, res){
+  User.find({}, function(err, users){
+    res.send(users);
+  });
+});
 
+router.post('/admin/new', function(req, res){
+  bcrypt.genSalt(10, function(err, salt){
+    bcrypt.hash(req.body.password, salt, function(err, hash){
+      var admin = new User({
+        username: req.body.username,
+        password: hash
+      });
+      admin.save(function(err, admin) {
+        if (err) throw err;
+        var token = jwt.sign(admin, config.secret, {
+            expiresInMinutes: 1440
+          });
+          res.json({
+            success: true,
+            message: "Authenticated",
+            token: token
+          });
+      });
+    });
+  });
+})
 
 router.post('admin/project', function(req, res){
   var project = new Project({name: req.body.name, description: req.body.description, url: req.body.url, image: req.body.image});
