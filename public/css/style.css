@@ -58,37 +58,6 @@ h1, h2, .signature {
     text-shadow: 2px 2px 2px #000;
     cursor: pointer; }
 
-.photos ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
-  .photos ul .photo {
-    max-height: 20rem; }
-
-.project-image {
-  width: 15rem;
-  height: auto; }
-
-.signature {
-  font-size: 1.5rem; }
-
-.projects, .videos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around; }
-
-.project {
-  width: 100%;
-  box-shadow: 0 1px 1px #333;
-  padding: 1.17rem;
-  text-align: center;
-  background: #fff;
-  margin-bottom: 1rem; }
-  .project h3 {
-    margin-top: 0; }
-  .project p {
-    text-shadow: none; }
-
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
@@ -106,10 +75,7 @@ h1, h2, .signature {
       .page-nav ul hr {
         display: none; }
       .page-nav ul li {
-        width: inherit; }
-  .project {
-    width: 20rem;
-    height: 20rem; } }
+        width: inherit; } }
 
 .hamburger {
   cursor: pointer;
@@ -259,6 +225,37 @@ h1, h2, .signature {
   .section .contact {
     text-align: center; }
 
+.projects, .videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.project {
+  width: 100%;
+  box-shadow: 0 1px 1px #333;
+  padding: 1.17rem;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 1rem; }
+  .project h3 {
+    margin-top: 0; }
+  .project p {
+    text-shadow: none; }
+
+.photos ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .photos ul .photo {
+    max-height: 20rem; }
+
+.project-image {
+  width: 15rem;
+  height: auto; }
+
+.signature {
+  font-size: 1.5rem; }
+
 @media screen and (min-width: 500px) {
   .section {
     padding: 9rem 4rem; }
@@ -269,4 +266,7 @@ h1, h2, .signature {
     .section .photos {
       padding: 1rem; }
       .section .photos h2 {
-        margin-bottom: 1rem; } }
+        margin-bottom: 1rem; }
+  .project {
+    width: 20rem;
+    height: 20rem; } }

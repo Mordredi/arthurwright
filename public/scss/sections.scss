@@ -58,6 +58,46 @@
   }
 }
 
+.projects, .videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project {
+  width: 100%;
+  box-shadow: 0 1px 1px #333;
+  padding: 1.17rem;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 1rem;
+  h3 {
+    margin-top: 0;
+  }
+  p {
+    text-shadow: none;
+  }
+}
+
+.photos {
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .photo {
+      max-height: 20rem;
+    }
+  }
+}
+
+.project-image {
+  width: 15rem;
+  height: auto;
+}
+
+.signature {
+  font-size: 1.5rem;
+}
 
 @media screen and (min-width: 500px) {
   .section {
@@ -74,5 +114,9 @@
         margin-bottom: 1rem ;
       }
     }
+  }
+  .project {
+    width: 20rem;
+    height: 20rem;
   }
 }
