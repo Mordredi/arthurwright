@@ -49,7 +49,7 @@
   }
   &.project-img {
     background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/tvchat.png') center no-repeat; //image supplied by Luke Chesser
+    url('../img/tvchat.png') left no-repeat;
     background-attachment: scroll;
     background-size: cover;
   }
