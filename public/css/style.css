@@ -15,15 +15,9 @@ h1, h2, .signature {
   top: 0;
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
   height: 5rem;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding: 0 1rem;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 100vw;
   font-size: 1.2rem;
@@ -33,16 +27,10 @@ h1, h2, .signature {
     font-size: 2rem; }
   .page-nav ul {
     margin: 0;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     position: fixed;
     top: -1000rem;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
     padding: 0;
     background: rgba(0, 194, 10, 0.3); }
@@ -50,7 +38,6 @@ h1, h2, .signature {
       width: 90%; }
     .page-nav ul li {
       width: 10rem;
-      padding: .5rem;
       text-align: center;
       list-style: none; }
     .page-nav ul.open {
@@ -81,8 +68,6 @@ h1, h2, .signature {
     .page-nav ul {
       background: none;
       position: static;
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
       flex-direction: row; }
       .page-nav ul .nav-break {
         display: inline; }
@@ -112,7 +97,6 @@ h1, h2, .signature {
 
 .hamburger span::after {
   bottom: -.5rem;
-  -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%; }
 
 @media screen and (min-width: 950px) {
@@ -120,14 +104,8 @@ h1, h2, .signature {
     display: none; } }
 
 .image {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -135,38 +113,48 @@ h1, h2, .signature {
   text-shadow: 2px 2px 1px #000;
   background-position: center; }
   .image.about {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/AW_135-compressed.jpg") no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/AW_135-compressed.jpg") no-repeat;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center; }
   .image.performer {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/widow.jpg") no-repeat fixed, #000;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/widow.jpg") no-repeat, #000;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center right; }
   .image.upcoming-img {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/contact.jpg") no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/contact.jpg") no-repeat;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center; }
   .image.developer {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/developer-compressed.jpg") no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/developer-compressed.jpg") no-repeat;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center; }
   .image.contact {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/unsplash-bonus-compressed.jpg") bottom no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/unsplash-bonus-compressed.jpg") bottom no-repeat;
+    background-attachment: scroll;
     background-size: cover; }
   .image.blog {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/Optimized-blog.jpg") center no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/Optimized-blog.jpg") center no-repeat;
+    background-attachment: scroll;
     background-size: cover; }
   .image.project-img {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/tvchat.png") center no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/tvchat.png") center no-repeat;
+    background-attachment: scroll;
     background-size: cover; }
   .image.rates {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/mac-glasses-compressed.jpg") center no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/mac-glasses-compressed.jpg") center no-repeat;
+    background-attachment: scroll;
     background-size: cover; }
   .image.photos {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/photo-compressed.jpg") center no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/photo-compressed.jpg") center no-repeat;
+    background-attachment: scroll;
     background-size: cover; }
   .image.video-img {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/video-compressed.jpg") center no-repeat fixed;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../img/video-compressed.jpg") center no-repeat;
+    background-attachment: scroll;
     background-size: cover; }
   .image h2 {
     margin: 0;
@@ -189,6 +177,10 @@ h1, h2, .signature {
   .image h2 {
     font-size: 5rem; } }
 
+@media screen and (min-width: 1200px) {
+  .image.performer, .image.about, .image.upcoming-img, .image.developer, .image.contact, .image.blog, .image.project-img, .image.rates, .image.photos, .image.video-img {
+    background-attachment: fixed; } }
+
 .btn {
   display: inline-block;
   margin: .5rem 0;
@@ -208,17 +200,11 @@ h1, h2, .signature {
   background: #eee;
   min-height: 100vh;
   width: 100vw;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
-  padding: 6rem 0 1rem; }
+  padding: 0 1rem; }
   .section ul {
     padding: 0;
     margin: 0; }
@@ -229,15 +215,21 @@ h1, h2, .signature {
     text-align: center;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 1px 2px 4px #333;
-    padding: 1rem; }
+    padding: 7rem 1rem 1rem;
+    min-height: 100vh; }
     .section .text h2 {
       color: #006600;
       text-shadow: 2px 2px 1px #ccc; }
-  .section .post h2, .section .post p, .section .blog h2, .section .blog p, .section .photos h2, .section .photos p, .section .videos h2, .section .videos p {
+  .section .post h2, .section .post p, .section .blog h2, .section .blog p, .section .photos h2, .section .photos p, .section .videos h2, .section .videos p, .section .upcoming h2, .section .upcoming p {
     text-shadow: none; }
-  .section .post .meta, .section .blog .meta, .section .photos .meta, .section .videos .meta {
+  .section .post h2, .section .blog h2, .section .photos h2, .section .videos h2, .section .upcoming h2 {
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif; }
+  .section .post .meta, .section .blog .meta, .section .photos .meta, .section .videos .meta, .section .upcoming .meta {
     font-size: .8rem;
     color: #777; }
+  .section .article {
+    text-align: left;
+    margin-top: 1rem; }
   .section .photo {
     max-width: 20rem;
     margin: .5rem 0; }
@@ -253,14 +245,8 @@ h1, h2, .signature {
     text-align: center; }
 
 .projects, .videos {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
   justify-content: space-around; }
 
 .project {
@@ -276,14 +262,8 @@ h1, h2, .signature {
     text-shadow: none; }
 
 .photos ul {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
   justify-content: space-around; }
   .photos ul .photo {
     max-height: 20rem; }
@@ -297,15 +277,11 @@ h1, h2, .signature {
 
 @media screen and (min-width: 500px) {
   .section {
-    padding: 9rem 4rem; }
+    padding: 0 4rem; }
     .section .text {
-      padding: 3rem; }
+      padding: 12rem 3rem; }
       .section .text h2 {
         margin: 0; }
-    .section .photos {
-      padding: 1rem; }
-      .section .photos h2 {
-        margin-bottom: 1rem; }
   .project {
     width: 20rem;
     height: 20rem; } }

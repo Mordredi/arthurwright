@@ -2,7 +2,7 @@
   <div class="text blog">
     <div ng-repeat='post in posts | orderBy:"-_id"'>
       <h2><a ng-href="blog/{{post._id}}">{{post.title}}</a></h2>
-      <p>{{post.article | limitTo: 20}}{{post.article.length > 20 ? '...' : '' }}</p>
+      <div ng-bind-html="post.article | limitHtml: 20"></div>
     </div>
   </div>
 </div>

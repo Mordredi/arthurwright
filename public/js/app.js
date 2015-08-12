@@ -1,1 +1,1 @@
-angular.module('ArthurWright', ['ngRoute', 'ngResource', 'ngStorage']);
+angular.module('ArthurWright', ['ngRoute', 'ngResource', 'ngStorage', 'ngCkeditor', 'ngSanitize']);

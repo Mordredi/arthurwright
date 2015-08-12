@@ -10,4 +10,8 @@ angular.module('ArthurWright').controller('AdminBlogController', function(Blog, 
       });
     }
   }
+  $scope.editorOptions = {
+    language: 'en',
+    uiColor: '#ffffff'
+  };
 });

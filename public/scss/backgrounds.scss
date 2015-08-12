@@ -9,56 +9,66 @@
   background-position: center;
   &.about {
     background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/AW_135-compressed.jpg') no-repeat fixed;
+    url('../img/AW_135-compressed.jpg') no-repeat;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
   }
   &.performer {
     background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/widow.jpg') no-repeat fixed, #000;
+    url('../img/widow.jpg') no-repeat, #000;
+    background-attachment: scroll;
     background-size: cover;
     background-position: center right;
   }
   &.upcoming-img {
     background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/contact.jpg') no-repeat fixed; //image by William Ivan
+    url('../img/contact.jpg') no-repeat; //image by William Ivan
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
   }
   &.developer {
     background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/developer-compressed.jpg') no-repeat fixed; //image by Aleksi Tappura
+    url('../img/developer-compressed.jpg') no-repeat; //image by Aleksi Tappura
+    background-attachment: scroll;
     background-size: cover;
     background-position: center;
   }
   &.contact {
     background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/unsplash-bonus-compressed.jpg') bottom no-repeat fixed; //image supplied by Luke Chesser
+    url('../img/unsplash-bonus-compressed.jpg') bottom no-repeat; //image supplied by Luke Chesser
+    background-attachment: scroll;
     background-size: cover;
   }
   &.blog {
     background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/Optimized-blog.jpg') center no-repeat fixed; //image supplied by Luke Chesser
+    url('../img/Optimized-blog.jpg') center no-repeat; //image supplied by Luke Chesser
+    background-attachment: scroll;
     background-size: cover;
   }
   &.project-img {
     background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/tvchat.png') center no-repeat fixed; //image supplied by Luke Chesser
+    url('../img/tvchat.png') center no-repeat; //image supplied by Luke Chesser
+    background-attachment: scroll;
     background-size: cover;
   }
   &.rates {
     background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/mac-glasses-compressed.jpg') center no-repeat fixed; //image supplied by Luke Chesser
+    url('../img/mac-glasses-compressed.jpg') center no-repeat; //image supplied by Luke Chesser
+    background-attachment: scroll;
     background-size: cover;
   }
   &.photos {
    background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/photo-compressed.jpg') center no-repeat fixed; //image supplied by Jeff Sheldon
+    url('../img/photo-compressed.jpg') center no-repeat; //image supplied by Jeff Sheldon
+    background-attachment: scroll;
     background-size: cover;
   }
   &.video-img {
    background: linear-gradient(to right, $image-gradient,  $image-gradient),
-    url('../img/video-compressed.jpg') center no-repeat fixed;
+    url('../img/video-compressed.jpg') center no-repeat;
+    background-attachment: scroll;
     background-size: cover;
   }
   h2 {
@@ -92,6 +102,13 @@
     }
     h2 {
       font-size: 5rem;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .image {
+    &.performer, &.about, &.upcoming-img, &.developer, &.contact, &.blog, &.project-img, &.rates, &.photos, &.video-img {
+      background-attachment: fixed;
     }
   }
 }
